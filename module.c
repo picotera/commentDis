@@ -1,9 +1,8 @@
-#include "redismodule.h"
-#include "rmutil/util.h"
-#include "rmutil/strings.h"
-#include "rmutil/test_util.h"
-#include <stdlib.h>
 #include <string.h>
+#include "rmutil/util.h"
+#include "redismodule.h"
+
+
 int CommentCommand(RedisModuleCtx *ctx, RedisModuleString **argv, int argc)
 {
     RedisModule_ReplyWithSimpleString(ctx, "OK");
