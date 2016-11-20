@@ -1,5 +1,3 @@
-#include <string.h>
-// #include "rmutil/util.h"
 #include "redismodule.h"
 
 
