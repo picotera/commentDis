@@ -3,11 +3,9 @@
 #include "redismodule.h"
 
 
-#define __rmutil_register_cmd(ctx, cmd, f) \
+#define RMUtil_RegisterReadCmd(ctx, cmd, f) \
     if (RedisModule_CreateCommand(ctx, cmd, f, "readonly", \
         1, 1, 1) == REDISMODULE_ERR) return REDISMODULE_ERR;
-                                                  
-#define RMUtil_RegisterReadCmd(ctx, cmd, f) __rmutil_register_cmd(ctx, cmd, f)
 
 int CommentCommand(RedisModuleCtx *ctx, RedisModuleString **argv, int argc)
 {
