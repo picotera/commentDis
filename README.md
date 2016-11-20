@@ -1,5 +1,6 @@
-[![forthebadge](http://forthebadge.com/images/badges/compatibility-emacs.svg)](http://forthebadge.com)
-[![forthebadge](http://forthebadge.com/images/badges/reading-6th-grade-level.svg)](http://forthebadge.com)
+[![jk](https://img.shields.io/badge/compatibility-emacs-green.svg?style=flat-square)](LICENSE)
+[![jk](https://img.shields.io/badge/reading_level-4th_grade-blue.svg?style=flat-square)](LICENSE)
+[![jk](https://img.shields.io/badge/held_toghether_by-chewing_gum-C70039.svg?style=flat-square)](LICENSE)
 
 # commentDis
 Add some comments to your redis-cli scripts
