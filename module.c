@@ -1,7 +1,13 @@
 #include <string.h>
-#include "rmutil/util.h"
+// #include "rmutil/util.h"
 #include "redismodule.h"
 
+
+#define __rmutil_register_cmd(ctx, cmd, f) \
+    if (RedisModule_CreateCommand(ctx, cmd, f, "readonly", \
+        1, 1, 1) == REDISMODULE_ERR) return REDISMODULE_ERR;
+                                                  
+#define RMUtil_RegisterReadCmd(ctx, cmd, f) __rmutil_register_cmd(ctx, cmd, f)
 
 int CommentCommand(RedisModuleCtx *ctx, RedisModuleString **argv, int argc)
 {
@@ -18,15 +24,13 @@ int RedisModule_OnLoad(RedisModuleCtx *ctx)
     }
 
     // register CommentCommand - using the shortened utility registration macro
-    RMUtil_RegisterWriteCmd(ctx, "#",        CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, ";",        CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, ";;",       CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, "//",       CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, "/*",       CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, "/**",      CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, "comment",  CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, "comment:", CommentCommand);
-
+    RMUtil_RegisterReadCmd(ctx, "#",        CommentCommand);
+    RMUtil_RegisterReadCmd(ctx, ";;",       CommentCommand);
+    RMUtil_RegisterReadCmd(ctx, "//",       CommentCommand);
+    RMUtil_RegisterReadCmd(ctx, "/*",       CommentCommand);
+    RMUtil_RegisterReadCmd(ctx, "/**",      CommentCommand);
+    RMUtil_RegisterReadCmd(ctx, "comment",  CommentCommand);
+    RMUtil_RegisterReadCmd(ctx, "comment:", CommentCommand);
 
     return REDISMODULE_OK;
 }
