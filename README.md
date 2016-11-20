@@ -1,6 +1,5 @@
 [![GitHub version](https://img.shields.io/github/release/picotera/commentDis.svg?style=flat-square)](https://github.com/picotera/commentDis/releases/latest)
-[![jk](https://img.shields.io/badge/compatibility-emacs-green.svg?style=flat-square)]()
-[![jk](https://img.shields.io/badge/reading_level-4th_grade-yellow.svg?style=flat-square)]()
+[![jk](https://img.shields.io/badge/reading_level-4th_grade-green.svg?style=flat-square)]()
 [![jk](https://img.shields.io/badge/held_toghether_by-chewing_gum-C70039.svg?style=flat-square)]()
 
 # commentDis
