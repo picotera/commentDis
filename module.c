@@ -18,12 +18,13 @@ int RedisModule_OnLoad(RedisModuleCtx *ctx)
     }
 
     // register CommentCommand - using the shortened utility registration macro
-    RMUtil_RegisterWriteCmd(ctx, "#",       CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, ";;",      CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, "//",      CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, "/*",      CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, "/**",     CommentCommand);
-    RMUtil_RegisterWriteCmd(ctx, "comment", CommentCommand);
+    RMUtil_RegisterWriteCmd(ctx, "#",        CommentCommand);
+    RMUtil_RegisterWriteCmd(ctx, ";",        CommentCommand);
+    RMUtil_RegisterWriteCmd(ctx, ";;",       CommentCommand);
+    RMUtil_RegisterWriteCmd(ctx, "//",       CommentCommand);
+    RMUtil_RegisterWriteCmd(ctx, "/*",       CommentCommand);
+    RMUtil_RegisterWriteCmd(ctx, "/**",      CommentCommand);
+    RMUtil_RegisterWriteCmd(ctx, "comment",  CommentCommand);
     RMUtil_RegisterWriteCmd(ctx, "comment:", CommentCommand);
 
 
