@@ -10,10 +10,13 @@ Add some comments to your redis-cli scripts
 * **`comment`** *`guess what goes here`*
 * **`comment:`** *`a comment, duh`*
 * **`#`** *`or some text`*
-* **`;;`** *`or whatever`*
+* **`;;`** *`or like.. some unneeded redis command or whatever`*
 * **`//`** *`preferebly explain somthing..`*
 * `/*` *`but you can even leave this empty like so:`*
 * `/**`
 
 ### return value
 All the different comment types will always return the simple string `OK`
+
+
+**PLEASE NOTE:** The module does *NOT* support multi-line comments - each line should be commented on it's own.
