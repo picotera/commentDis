@@ -10,7 +10,7 @@ Add some comments to your redis-cli scripts
 * **`comment`** *`guess what goes here`*
 * **`comment:`** *`a comment, duh`*
 * **`#`** *`or some text`*
-* **`;;`** *`or whatever`*
+* **`;;`** *`or like.. some unnended redis command or whatever`*
 * **`//`** *`preferebly explain somthing..`*
 * `/*` *`but you can even leave this empty like so:`*
 * `/**`
