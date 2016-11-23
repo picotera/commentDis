@@ -7,7 +7,7 @@
 
 int CommentCommand(RedisModuleCtx *ctx, RedisModuleString **argv, int argc)
 {
-    RedisModule_ReplyWithSimpleString(ctx, "OK");
+    RedisModule_ReplyWithSimpleString(ctx, "");
     return REDISMODULE_OK;    
 }
 
