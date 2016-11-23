@@ -17,3 +17,6 @@ Add some comments to your redis-cli scripts
 
 ### return value
 All the different comment types will always return the simple string `OK`
+
+
+**PLEASE NOTE:** The module does *NOT* support multi-line comments - each line should be commented on it's own.
