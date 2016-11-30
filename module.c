@@ -2,7 +2,7 @@
 
 
 #define RMUtil_RegisterReadCmd(ctx, cmd, f) \
-    if (RedisModule_CreateCommand(ctx, cmd, f, "readonly", \
+    if (RedisModule_CreateCommand(ctx, cmd, f, "readonly fast allow-loading allow-stale", \
         1, 1, 1) == REDISMODULE_ERR) return REDISMODULE_ERR;
 
 int CommentCommand(RedisModuleCtx *ctx, RedisModuleString **argv, int argc)
